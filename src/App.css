@@ -1,38 +1,211 @@
-.App {
+*{
+  margin:0;
+  padding:0;
+  border:0;
+  font-weight:100;
+  font-family: 'Open Sans', sans-serif;
+
+ 
+}
+/* .App {
+  text-align: center;
+} */
+
+.main-parallax,.signup-page,.login-page, .forget-page{
+  background: url("./image.jpg") repeat fixed 100%;
+  background-size: cover;
+  height:100vh;
+  color: aliceblue;  
+}
+.inner-parallax{
+  padding-top:20%;
+  padding-bottom: 20%;
+  text-align: center;
+}
+.signup-page,.login-page{
+  background: url("./Background.jpg") repeat fixed 100%;
+  background-size: cover;
+  height: 100vh;
+}
+.web-heading{
+  font-size: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  position: fixed;
+  top:0;
+  width:100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer{
+ display: flex;
+ background-color: rgb(29, 26, 29);
+ padding: 30px;
+ align-items: center;
+ justify-content: center; 
+ color:white;
 }
+.signup-form,.login-form{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+.forget-form,.email-verify-form,.reset-form{
+   margin : 0 auto; 
+   width:500px;
+   padding-top: 100px;
+   text-align: center;
+   gap:1rem;
+}
+.left-form{
+  width:350px;
+  margin:10px;
+  padding-bottom:7px;
+ 
+
+}
+.right-form{
+  width:220px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:15rem;
 }
 
-.App-link {
-  color: #61dafb;
+.color-box{
+/* border: 1px solid white; */
+margin: 0 auto; 
+width:700px;
+padding:5px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap:0.5rem;
+justify-content: center;
+align-items: stretch;
+/* background-color: whitesmoke; */
+color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.color-items{
+  display: grid;
+  transition: .3s;
+  align-items: center;
+  width:150px;
+  height:40px;
+  border:1px solid white; 
+  border-radius: 20px;
+  margin-top: 0 auto;
+  font-weight: bolder;
+  font-size: large;
+}
+.color-items:hover{
+  box-shadow: 0 0 8px whitesmoke;
+}
+
+.flex-box{
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap:0rem;
+}
+.color-page{
+text-align: center;
+color: aliceblue;
+background : url("https://uploads.toptal.io/blog/image/127408/toptal-blog-image-1540330529112-744f9e713eafde01e96a862cb2f0ccac.jpg");
+background-size: cover;
+background-repeat: repeat;
+height: 130vh;
+background-color: black;
+}
+.details-page{
+  font-size: 18px;
+  text-align: center;
+  margin : 0 auto; 
+  width:500px;
+  gap:0.5rem;
+}
+
+.day-color{
+  display: grid;
+  align-items: center;
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto; 
+  font-size: large;
+  color: black;
+}
+
+.no-page{
+  margin : 0 auto; 
+  text-align: center;
+  width:700px; 
+  padding-top:5%;
+}
+
+@media(max-width:420px){
+  .inner-parallax{
+    padding-top:50%;
+    padding-bottom: 50%;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .web-heading{
+     font-size: 45px;
+   }
+
+  .login-form, .signup-form{
+
+    width:300px;
+    height: max-content;
+    gap:1rem;
   }
+
+   .left-form{
+     width:290px;
+   }
+   .right-form{
+     width:300px;
+     height:150px;
+     gap:2rem;
+   }
+   .forget-form,.email-verify-form,.reset-form{
+     width: 300px;
+   }
+   .details-page{
+     width:300px;
+     font-size: 12px;
+   }
+   .color-box{
+     width:300px;
+   }
+   .color-items{
+     width:70px;
+     height: 20px;
+     font-size: 9px;
+
+   }
+   .day-color{
+     width:80px;
+     height:80px;
+     font-size: xx-small;
+   }
+   .no-page{
+
+     width:300px;
+   }
+   .no-page>img{
+     width:300px;
+   }
 }

@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { Route, Routes } from "react-router-dom";
 import './App.css';
+import { SignUpPage } from "./SignUpPage";
+import { LoginPage } from "./LoginPage";
+import { EmailVerification } from "./EmailVerification";
+import { ForgetPassword } from "./ForgetPassword";
+import { PasswordReset } from "./PasswordReset";
+import { ColorPage } from "./ColorPage";
+import { HomePage } from "./HomePage";
+import { Nopage } from "./Nopage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/signup" element={<SignUpPage/>}/>
+        <Route path="/colorPage" element={<ColorPage/>}/>
+        <Route path="/users/:id/verify/:token" element={<EmailVerification/>}/>
+        <Route path="/forget-password" element={<ForgetPassword/>}/>
+        <Route path="/api/password-reset/:id/:token" element={<PasswordReset/>}/>
+        <Route path ="*" element={<Nopage/>}/>
+      </Routes>
+   </div>
     </div>
+
   );
 }
 
